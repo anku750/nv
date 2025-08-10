@@ -1,129 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head><script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brocool.in - Fresh & Cool Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-        }
-
-        .navbar {
-            background: linear-gradient(to left, #ccffcc 0%, #00ccff 100%);
-            
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar img {
-            height: 40px;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #ffecb3, #ff6ec4);
-        }
-
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product-card {
-            background: white;
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .product-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .buy-now-btn {
-            background: #ff5722;
-            color: white;
-            padding: 8px 12px;
-            margin-top: 10px;
-            display: inline-block;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .order-form {
-            padding: 20px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            max-width: 400px;
-            margin: 20px auto;
-            display: none;
-        }
-
-        .order-form input, .order-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .order-form button {
-            background: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
-
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 1.5em;
-            text-align: center;
-        }
-
+        body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #e0f7fa, #e1bee7); }
+        .navbar { background-color: #ffffff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        .navbar img { height: 40px; }
+        .hero { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #ffecb3, #ffe0b2); }
+        .hero h1 { font-size: 2.5em; margin: 0; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { background: white; padding: 10px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
+        .product-card img { width: 100%; border-radius: 10px; }
+        .buy-now-btn { background: #ff5722; color: white; padding: 8px 12px; margin-top: 10px; display: inline-block; border: none; border-radius: 5px; cursor: pointer; }
+        .order-form { padding: 20px; background: #f5f5f5; border-radius: 10px; max-width: 400px; margin: 20px auto; display: none; }
+        .order-form input, .order-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        .order-form button { background: #4caf50; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; font-size: 1em; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+        .remove-btn { background: red; color: white; border: none; border-radius: 5px; padding: 3px 7px; cursor: pointer; font-size: 0.8em; }
+        .footer { background: #333; color: white; text-align: center; padding: 10px; }
+        .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px; border-radius: 50%; font-size: 1.5em; text-align: center; }
     </style>
 </head>
-
-<body><amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-4319423225607012">
-</amp-auto-ads>
+<body>
     <div class="navbar">
         <img src="logo.png" alt="Brocool Logo">
         <div>Brocool.in</div>
@@ -138,24 +39,26 @@
             <img src="product1.jpg" alt="Product 1">
             <h3>pravin naitam</h3>
             <p>₹100</p>
-            <button class="buy-now-btn" onclick="showOrderForm()">Buy Now</button>
+            <button class="buy-now-btn" onclick="addToCart('pravin naitam', 100)">Buy Now</button>
         </div>
         <div class="product-card">
             <img src="product2.jpg" alt="Product 2">
             <h3>Product Name</h3>
             <p>₹200</p>
-            <button class="buy-now-btn" onclick="showOrderForm()">Buy Now</button>
+            <button class="buy-now-btn" onclick="addToCart('Product Name', 200)">Buy Now</button>
         </div>
-        <!-- Add more product cards as needed -->
     </div>
 
     <div class="order-form" id="orderFormSection">
         <h2>Place Your Order</h2>
+        <div id="cartItems"></div>
+        <p><b>Delivery Charge:</b> ₹10</p>
+        <p><b>Total Amount:</b> ₹<span id="totalAmount">0</span></p>
         <form id="orderForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="tel" name="mobile" placeholder="Mobile Number" required>
             <input type="text" name="location" placeholder="Your Location" required>
-            <textarea name="orderDetails" placeholder="Order Details" required></textarea>
+            <textarea name="orderDetails" placeholder="Order Details" readonly required></textarea>
             <button type="submit">Submit Order</button>
         </form>
     </div>
@@ -169,18 +72,63 @@
     </a>
 
     <script>
-        function showOrderForm() {
+        let cart = [];
+        let deliveryCharge = 10;
+
+        function updateCartDisplay() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            cartItemsDiv.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.classList.add('cart-item');
+                div.innerHTML = `${item.name} - ₹${item.price} <button class="remove-btn" onclick="removeFromCart(${index})">❌</button>`;
+                cartItemsDiv.appendChild(div);
+            });
+            total += deliveryCharge;
+            document.getElementById('totalAmount').innerText = total;
+            document.querySelector('textarea[name="orderDetails"]').value = cart.map(i => `${i.name} - ₹${i.price}`).join(", ") + ` | Delivery Charge ₹${deliveryCharge}`;
+        }
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
             document.getElementById('orderFormSection').style.display = 'block';
+            updateCartDisplay();
             window.scrollTo({ top: document.getElementById('orderFormSection').offsetTop, behavior: 'smooth' });
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            if (cart.length === 0) {
+                document.getElementById('orderFormSection').style.display = 'none';
+            } else {
+                updateCartDisplay();
+            }
         }
 
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const orderId = 'BRO' + Math.floor(Math.random() * 1000000);
-            alert('Thank you for your order! Your Order ID is ' + orderId);
-            // Here, you can add email notification integration later.
+            const name = this.name.value;
+            const mobile = this.mobile.value;
+            const location = this.location.value;
+            const details = document.querySelector('textarea[name="orderDetails"]').value;
+            const total = document.getElementById('totalAmount').innerText;
+
+            const sellerMsg = `🛒 *New Order!*%0AOrder ID: ${orderId}%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0ALocation: ${encodeURIComponent(location)}%0AOrder Details: ${encodeURIComponent(details)}%0ATotal: ₹${total}`;
+            const customerMsg = `Thank you ${encodeURIComponent(name)}!%0AYour Order ID is ${orderId}.%0AWe will contact you soon.%0ATotal Amount: ₹${total}`;
+
+            alert(`Thank you ${name}! Your Order ID is ${orderId}.`);
+
+            window.open(`https://wa.me/918459966421?text=${sellerMsg}`, '_blank');
+            window.open(`https://wa.me/${mobile}?text=${customerMsg}`, '_blank');
+
+            cart = [];
+            this.reset();
+            document.getElementById('orderFormSection').style.display = 'none';
         });
     </script>
 </body>
-
 </html>
+
