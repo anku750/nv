@@ -1,0 +1,14 @@
+<div class="products">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>pravin naitam</h3>
+            <p>₹100</p>
+            <button class="buy-now-btn" onclick="addToCart('pravin naitam', 100)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product Name</h3>
+            <p>₹200</p>
+            <button class="buy-now-btn" onclick="addToCart('Product Name', 200)">Buy Now</button>
+        </div>
+    </div>
