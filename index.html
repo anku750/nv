@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #bbccff 0%,#ff99cc 100%); }
-        .navbar { background: linear-gradient(to left, #66ffff 0%,#0066ff 100%); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        .navbar { background: linear-gradient(to left, #fda085 0%,#f6d356 100%); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
         .navbar img { height: 40px; }
         .hero { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #00ffff 0%,#9966ff 100%); }
-        .hero h1 { font-size: 2.5em; margin: 0; }
+        .hero h1 {
+  font-size: 32px; /* apne hisab se badal sakte ho */
+  font-weight: bold;
+  background: linear-gradient(to right, #b09eff, #fc6cb4, #ffd86f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+font-size: 2.5em; margin: 0; }
         .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 20px; }
         .product-card { background: linear-gradient(to left, #33ccff 0%,#ff99ff 100%); padding: 10px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
         .product-card img { width: 100%; border-radius: 10px; }
