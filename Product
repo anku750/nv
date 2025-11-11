@@ -1,14 +1,99 @@
-<div class="products">
-        <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <h3>pravin naitam</h3>
-            <p>₹100</p>
-            <button class="buy-now-btn" onclick="addToCart('pravin naitam', 100)">Buy Now</button>
-        </div>
-        <div class="product-card">
-            <img src="product2.jpg" alt="Product 2">
-            <h3>Product Name</h3>
-            <p>₹200</p>
-            <button class="buy-now-btn" onclick="addToCart('Product Name', 200)">Buy Now</button>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brocool Admin Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 { margin-bottom: 10px; }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+    }
+    .product {
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px auto;
+      width: 300px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background: white;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧊 Brocool Admin Panel</h1>
+  <p>Add new product below:</p>
+  <input type="text" id="productName" placeholder="Product Name">
+  <input type="text" id="productPrice" placeholder="Price (₹)">
+  <input type="file" id="productImage" accept="image/*">
+  <button onclick="addProduct()">Add Product</button>
+  
+  <h2>All Products</h2>
+  <div id="productList"></div>
+
+  <script>
+    const productList = document.getElementById("productList");
+    let products = JSON.parse(localStorage.getItem("brocoolProducts")) || [];
+
+    function renderProducts() {
+      productList.innerHTML = "";
+      products.forEach((p, i) => {
+        productList.innerHTML += `
+          <div class="product">
+            <img src="${p.image}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p>₹${p.price}</p>
+            <button onclick="deleteProduct(${i})">Delete</button>
+          </div>`;
+      });
+    }
+
+    function addProduct() {
+      const name = document.getElementById("productName").value;
+      const price = document.getElementById("productPrice").value;
+      const file = document.getElementById("productImage").files[0];
+
+      if (!name || !price || !file) return alert("Please fill all fields!");
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const image = e.target.result;
+        products.push({ name, price, image });
+        localStorage.setItem("brocoolProducts", JSON.stringify(products));
+        renderProducts();
+        document.getElementById("productName").value = "";
+        document.getElementById("productPrice").value = "";
+        document.getElementById("productImage").value = "";
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function deleteProduct(index) {
+      products.splice(index, 1);
+      localStorage.setItem("brocoolProducts", JSON.stringify(products));
+      renderProducts();
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
