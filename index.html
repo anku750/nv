@@ -3,203 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brocool.in - Fresh & Cool Products</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4319423225607012"
-     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>🧊 Brocool Shop</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #bbccff 0%,#ff99cc 100%); }
-    .navbar { 
-      background: linear-gradient(to left, #fda085 0%,#f6d356 100%); 
-      padding: 10px 20px; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .logo-container { display: flex; align-items: center; gap: 10px; }
-    .logo {
-      height: 45px; width: 45px;
-      background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      color: white; font-weight: bold; font-size: 20px;
-      border: 2px solid gold; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: #fff;
+      min-height: 100vh;
+      padding: 30px 10px;
+      text-align: center;
     }
-    .brand {
-      font-weight: bold; font-size: 1.5em; color: #2c3e50;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1); font-family: 'Georgia', serif;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+      animation: fadeIn 1.2s ease-in;
     }
-    /* Hero */
-    .hero { 
-      text-align: center; padding: 70px 20px;
-      position: relative; color: white; overflow: hidden;
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
     }
-    .hero::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-                  url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop&s=4a3b1d1e');
-      background-size: cover; background-position: center; z-index: -1;
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      padding: 10px;
+      animation: fadeIn 1.2s ease-in;
     }
-    .hero h1 { font-size: 2.2em; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
-    /* Products */
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 20px; }
-    .product-card, .product-card2 {
-      padding: 10px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;
+    .product {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .product-card { background: linear-gradient(to left, #33ccff 0%,#ff99ff 100%); }
-    .product-card2{ background: linear-gradient(to left, #ff99ff 0%,#33ccff 100%); }
-    .product-card img, .product-card2 img { width: 100%; border-radius: 10px; }
-    .buy-now-btn { background: #ff5722; color: white; padding: 8px 12px; margin-top: 10px; display: inline-block; border: none; border-radius: 5px; cursor: pointer; }
-    /* Order Form */
-    .order-form { padding: 20px; background: #f5f5f5; border-radius: 10px; max-width: 400px; margin: 20px auto; display: none; }
-    .order-form input, .order-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    .order-form button { background: #4caf50; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; font-size: 1em; }
-    .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
-    .remove-btn { background: red; color: white; border: none; border-radius: 5px; padding: 3px 7px; cursor: pointer; font-size: 0.8em; }
-    /* Footer */
-    .footer { background: #333; color: white; text-align: center; padding: 10px; }
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px; border-radius: 50%; font-size: 1.5em; text-align: center; }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: transform 0.4s;
+    }
+    .product:hover img {
+      transform: scale(1.05);
+    }
+    h3 {
+      margin: 5px 0;
+    }
+    p {
+      font-weight: 500;
+      color: #ffdf6b;
+      margin-bottom: 10px;
+    }
+    button {
+      background: linear-gradient(135deg, #00ffcc, #0099ff);
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #00cc99, #0077cc);
+      transform: scale(1.05);
+    }
+    #orderForm {
+      display: none;
+      background: rgba(0,0,0,0.7);
+      padding: 25px;
+      border-radius: 16px;
+      margin-top: 25px;
+      animation: fadeIn 0.8s ease-in;
+    }
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 80%;
+      margin: 6px 0;
+      text-align: center;
+      font-size: 15px;
+    }
+    #cartItems p {
+      text-align: left;
+      padding-left: 20px;
+    }
+    #totalPrice {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo-container">
-      <div class="logo">B</div>
-      <div class="brand">Brocool.in</div>
-    </div>
-    <div>Fresh & Cool Products</div>
-  </div>
+  <h1>🛍️ Welcome to Brocool Store</h1>
+  <div id="productList" class="product-container"></div>
 
-  <div class="hero">
-    <h1>Fresh Products Delivered to You</h1>
-  </div>
-
-  <!-- Products Section (20 cards) -->
-  <div class="products">
-    <!-- 1 -->
-    <div class="product-card"><img src="product1.jpg"><h3>Pravin Naitam</h3><p>₹100</p><button class="buy-now-btn" onclick="addToCart('Pravin Naitam',100)">Buy Now</button></div>
-    <!-- 2 -->
-    <div class="product-card2"><img src="product2.jpg"><h3>Product Name</h3><p>₹200</p><button class="buy-now-btn" onclick="addToCart('Product Name',200)">Buy Now</button></div>
-    <!-- 3 -->
-    <div class="product-card"><img src="product1.jpg"><h3>Mango</h3><p>₹100</p><button class="buy-now-btn" onclick="addToCart('Mango',100)">Buy Now</button></div>
-    <!-- 4 -->
-    <div class="product-card2"><img src="product2.jpg"><h3>Apple</h3><p>₹120</p><button class="buy-now-btn" onclick="addToCart('Apple',120)">Buy Now</button></div>
-    <!-- 5 -->
-    <div class="product-card"><img src="product3.jpg"><h3>Banana</h3><p>₹60</p><button class="buy-now-btn" onclick="addToCart('Banana',60)">Buy Now</button></div>
-    <!-- 6 -->
-    <div class="product-card2"><img src="product4.jpg"><h3>Orange</h3><p>₹90</p><button class="buy-now-btn" onclick="addToCart('Orange',90)">Buy Now</button></div>
-    <!-- 7 -->
-    <div class="product-card"><img src="product5.jpg"><h3>Pineapple</h3><p>₹150</p><button class="buy-now-btn" onclick="addToCart('Pineapple',150)">Buy Now</button></div>
-    <!-- 8 -->
-    <div class="product-card2"><img src="product6.jpg"><h3>Grapes</h3><p>₹80</p><button class="buy-now-btn" onclick="addToCart('Grapes',80)">Buy Now</button></div>
-    <!-- 9 -->
-    <div class="product-card"><img src="product7.jpg"><h3>Watermelon</h3><p>₹70</p><button class="buy-now-btn" onclick="addToCart('Watermelon',70)">Buy Now</button></div>
-    <!-- 10 -->
-    <div class="product-card2"><img src="product8.jpg"><h3>Strawberry</h3><p>₹200</p><button class="buy-now-btn" onclick="addToCart('Strawberry',200)">Buy Now</button></div>
-    <!-- 11 -->
-    <div class="product-card"><img src="product9.jpg"><h3>Papaya</h3><p>₹110</p><button class="buy-now-btn" onclick="addToCart('Papaya',110)">Buy Now</button></div>
-    <!-- 12 -->
-    <div class="product-card2"><img src="product10.jpg"><h3>Kiwi</h3><p>₹250</p><button class="buy-now-btn" onclick="addToCart('Kiwi',250)">Buy Now</button></div>
-    <!-- 13 -->
-    <div class="product-card"><img src="product11.jpg"><h3>Guava</h3><p>₹60</p><button class="buy-now-btn" onclick="addToCart('Guava',60)">Buy Now</button></div>
-    <!-- 14 -->
-    <div class="product-card2"><img src="product12.jpg"><h3>Dragon Fruit</h3><p>₹300</p><button class="buy-now-btn" onclick="addToCart('Dragon Fruit',300)">Buy Now</button></div>
-    <!-- 15 -->
-    <div class="product-card"><img src="product13.jpg"><h3>Pomegranate</h3><p>₹180</p><button class="buy-now-btn" onclick="addToCart('Pomegranate',180)">Buy Now</button></div>
-    <!-- 16 -->
-    <div class="product-card2"><img src="product14.jpg"><h3>Chikoo</h3><p>₹90</p><button class="buy-now-btn" onclick="addToCart('Chikoo',90)">Buy Now</button></div>
-    <!-- 17 -->
-    <div class="product-card"><img src="product15.jpg"><h3>Coconut</h3><p>₹50</p><button class="buy-now-btn" onclick="addToCart('Coconut',50)">Buy Now</button></div>
-    <!-- 18 -->
-    <div class="product-card2"><img src="product16.jpg"><h3>Peach</h3><p>₹140</p><button class="buy-now-btn" onclick="addToCart('Peach',140)">Buy Now</button></div>
-    <!-- 19 -->
-    <div class="product-card"><img src="product17.jpg"><h3>Lychee</h3><p>₹220</p><button class="buy-now-btn" onclick="addToCart('Lychee',220)">Buy Now</button></div>
-    <!-- 20 -->
-    <div class="product-card2"><img src="product18.jpg"><h3>Blueberry</h3><p>₹350</p><button class="buy-now-btn" onclick="addToCart('Blueberry',350)">Buy Now</button></div>
-  </div>
-
-  <!-- Order Form -->
-  <div class="order-form" id="orderFormSection">
-    <h2>Place Your Order</h2>
+  <div id="orderForm">
+    <h2>Your Cart 🛒</h2>
     <div id="cartItems"></div>
-    <p><b>Delivery Charge:</b> ₹10</p>
-    <p><b>Total Amount:</b> ₹<span id="totalAmount">0</span></p>
-    <form id="orderForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="mobile" placeholder="Mobile Number" required>
-      <input type="text" name="location" placeholder="Your Location" required>
-      <textarea name="orderDetails" placeholder="Order Details" readonly required></textarea>
-      <button type="submit">Submit Order</button>
-    </form>
+    <h3 id="totalPrice">Total: ₹0</h3>
+
+    <h2>Enter Your Details</h2>
+    <input type="text" id="buyerName" placeholder="Your Name"><br>
+    <input type="text" id="buyerPhone" placeholder="Your Mobile Number"><br>
+    <input type="text" id="buyerAddress" placeholder="Your Address"><br>
+    <button onclick="sendWhatsAppOrder()">📱 Send on WhatsApp</button>
+    <button onclick="cancelOrder()">❌ Clear Cart</button><br><br>
+    <button onclick="closeForm()">🔙 Back to Shop</button>
   </div>
 
-  <div class="footer">
-    <p>Contact us at: 8459966421 | brocool.in</p>
-  </div>
-
-  <a href="https://wa.me/918459966421" class="whatsapp-button" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <footer>© 2025 Brocool.in | Designed with 💙 by Pravin</footer>
 
   <script>
     let cart = [];
-    let deliveryCharge = 10;
+    const productList = document.getElementById("productList");
+    const cartItems = document.getElementById("cartItems");
+    const totalPriceEl = document.getElementById("totalPrice");
+    const products = JSON.parse(localStorage.getItem("brocoolProducts")) || [];
 
-    function updateCartDisplay() {
-      const cartItemsDiv = document.getElementById('cartItems');
-      cartItemsDiv.innerHTML = '';
-      let total = 0;
-      cart.forEach((item, index) => {
-        total += item.price;
-        const div = document.createElement('div');
-        div.classList.add('cart-item');
-        div.innerHTML = `${item.name} - ₹${item.price} <button class="remove-btn" onclick="removeFromCart(${index})">❌</button>`;
-        cartItemsDiv.appendChild(div);
+    function renderProducts() {
+      productList.innerHTML = "";
+      products.forEach((p, i) => {
+        productList.innerHTML += `
+          <div class="product">
+            <img src="${p.image}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p>₹${p.price}</p>
+            <button onclick="addToCart(${i})">Add to Cart</button>
+          </div>`;
       });
-      total += deliveryCharge;
-      document.getElementById('totalAmount').innerText = total;
-      document.querySelector('textarea[name="orderDetails"]').value =
-        cart.map(i => `${i.name} - ₹${i.price}`).join(", ") + ` | Delivery Charge ₹${deliveryCharge}`;
     }
 
-    function addToCart(productName, price) {
-      cart.push({ name: productName, price: price });
-      document.getElementById('orderFormSection').style.display = 'block';
-      updateCartDisplay();
-      window.scrollTo({ top: document.getElementById('orderFormSection').offsetTop, behavior: 'smooth' });
+    function addToCart(index) {
+      cart.push(products[index]);
+      updateCart();
+      document.getElementById("orderForm").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     }
 
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      if (cart.length === 0) {
-        document.getElementById('orderFormSection').style.display = 'none';
-      } else {
-        updateCartDisplay();
-      }
+    function updateCart() {
+      cartItems.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, i) => {
+        total += Number(item.price);
+        cartItems.innerHTML += `<p>${i + 1}. ${item.name} - ₹${item.price}</p>`;
+      });
+      totalPriceEl.textContent = "Total: ₹" + total;
     }
 
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const orderId = 'BRO' + Math.floor(Math.random() * 1000000);
-      const name = this.name.value;
-      const mobile = this.mobile.value;
-      const location = this.location.value;
-      const details = document.querySelector('textarea[name="orderDetails"]').value;
-      const total = document.getElementById('totalAmount').innerText;
+    function closeForm() {
+      document.getElementById("orderForm").style.display = "none";
+    }
 
-      const sellerMsg = `🛒 *New Order!*%0AOrder ID: ${orderId}%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0ALocation: ${encodeURIComponent(location)}%0AOrder Details: ${encodeURIComponent(details)}%0ATotal: ₹${total}`;
-      const customerMsg = `Thank you ${encodeURIComponent(name)}!%0AYour Order ID is ${orderId}.%0AWe will contact you soon.%0ATotal Amount: ₹${total}`;
+    function sendWhatsAppOrder() {
+      const name = document.getElementById("buyerName").value;
+      const phone = document.getElementById("buyerPhone").value;
+      const address = document.getElementById("buyerAddress").value;
 
-      alert(`Thank you ${name}! Your Order ID is ${orderId}.`);
+      if (!name || !phone || !address) return alert("Please fill all fields!");
 
-      window.open(`https://wa.me/918459966421?text=${sellerMsg}`, '_blank');
-      window.open(`https://wa.me/${mobile}?text=${customerMsg}`, '_blank');
+      let orderList = cart.map((c, i) => `${i + 1}. ${c.name} - ₹${c.price}`).join("%0A");
+      let total = cart.reduce((sum, c) => sum + Number(c.price), 0);
 
+      const message = `Hello Brocool! 👋%0A
+New Order Details:%0A
+${orderList}%0A
+--------------------%0A
+*Total: ₹${total}*%0A
+--------------------%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Address: ${address}`;
+
+      const sellerPhone = "918459966421";
+      const url = `https://wa.me/${sellerPhone}?text=${message}`;
+      window.open(url, "_blank");
+    }
+
+    function cancelOrder() {
       cart = [];
-      this.reset();
-      document.getElementById('orderFormSection').style.display = 'none';
-    });
+      updateCart();
+      alert("Your cart has been cleared!");
+    }
+
+    renderProducts();
   </script>
 </body>
 </html>
-
