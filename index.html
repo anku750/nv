@@ -1,211 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🧊 Brocool Shop</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #2b5876, #4e4376);
-      color: #fff;
-      min-height: 100vh;
-      padding: 30px 10px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(255,255,255,0.3);
-      animation: fadeIn 1.2s ease-in;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brocool.in — स्मार्ट टिप्स और जानकारी</title>
+<meta name="description" content="Brocool — रोजाना मोबाइल टिप्स, होम हैक्स, DIY प्रोजेक्ट्स और कमाई के आसान तरीके। सभी जानकारी हिंदी में।" />
+<meta name="keywords" content="मोबाइल टिप्स, होम हैक्स, DIY, कमाई के तरीके, Brocool" />
+<meta name="google-adsense-account" content="ca-pub-4319423225607012">
+<style>
+:root {
+    --primary1: #1e3c72;
+    --primary2: #2a5298;
+    --primary3: #6dd5ed;
+    --primary4: #2193b0;
+    --primary5: #00c6ff;
+    --bg: #f9f9f9;
+    --card: #ffffff;
+    --text: #000000;
+    --muted: #333;
+    --maxw: 1200px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+body { background: var(--bg); color: var(--text); }
+header { 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3') center/cover no-repeat; 
+    color: #fff; 
+    padding: 40px 20px; 
+    text-align: center; 
+}
+header .logo { font-size: 32px; font-weight: 800; }
+nav { 
+    background: #fff; 
+    padding: 15px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    position: sticky; 
+    top: 0; 
+    box-shadow: 0 3px 10px rgba(0,0,0,.1); 
+    z-index: 50; 
+}
 
-    .product-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-content: center;
-      padding: 10px;
-      animation: fadeIn 1.2s ease-in;
+/* Moving Gradient Button Design */
+nav a { 
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: 600; 
+    padding: 12px 25px;
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    position: relative; 
+    overflow: hidden; 
+    background: linear-gradient(135deg, 
+        #ff6b6b, #ffa726, #ffee58, #4caf50, 
+        #2196f3, #9c27b0, #ff6b6b);
+    background-size: 400% 400%;
+    animation: movingGradient 8s ease infinite;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 140px;
+}
+
+@keyframes movingGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.3);
+    animation-duration: 4s;
+}
+
+nav a:active {
+    transform: translateY(-1px);
+}
+
+/* Read Button with Moving Gradient */
+.read-btn { 
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 10px 20px; 
+    background: linear-gradient(135deg, 
+        #ff6b6b, #ffa726, #ffee58, #4caf50, 
+        #2196f3, #9c27b0, #ff6b6b);
+    background-size: 400% 400%;
+    animation: movingGradient 8s ease infinite;
+    color: #fff; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    transition: all 0.3s ease;
+}
+
+.read-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.3);
+    animation-duration: 4s;
+}
+
+.container { max-width: var(--maxw); margin: 30px auto; padding: 0 20px; }
+.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
+.post-card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.05); transition: transform 0.25s; cursor: pointer; }
+.post-card:hover { transform: translateY(-5px); }
+.post-card img { width: 100%; height: 200px; object-fit: cover; }
+.post-content { padding: 15px; }
+.post-content h3 { font-size: 20px; margin-bottom: 10px; color: var(--primary2); }
+.post-content p { color: var(--muted); line-height: 1.6; }
+.full-post { display: none; background: var(--card); padding: 25px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.08); margin-top: 25px; }
+.full-post.active { display: block; }
+.full-post img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+.full-post h1 { margin-bottom: 15px; color: var(--primary1); }
+.full-post p { margin-bottom: 15px; line-height: 1.7; color: var(--text); }
+.content-images { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+.content-images img { flex: 1; min-width: 200px; height: 150px; object-fit: cover; border-radius: 8px; }
+.ad-container { margin: 25px 0; text-align: center; padding: 15px; background: #f5f5f5; border-radius: 8px; }
+.ad-label { font-size: 12px; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+footer { text-align: center; padding: 20px; background: #111; color: #fff; margin-top: 40px; border-top: 4px solid rgba(255,255,255,.1); }
+
+@media(max-width: 640px) { 
+    .post-card img { height: 150px; } 
+    .full-post img { height: 220px; } 
+    header .logo { font-size: 26px; } 
+    .content-images img { min-width: 100%; }
+    nav { flex-wrap: colam; gap: 2px; }
+    nav a { 
+        padding: 7px 6px; 
+        font-size: 10px; 
+        min-width: 90px;
+        animation: movingGradient 6s ease infinite;
     }
-    .product {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      padding: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+    .read-btn {
+        animation: movingGradient 6s ease infinite;
     }
-    .product:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Additional animation for better performance */
+@media (prefers-reduced-motion: reduce) {
+    nav a, .read-btn {
+        animation: none;
+        background: linear-gradient(135deg, #2196f3, #9c27b0);
     }
-    img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      transition: transform 0.4s;
-    }
-    .product:hover img {
-      transform: scale(1.05);
-    }
-    h3 {
-      margin: 5px 0;
-    }
-    p {
-      font-weight: 500;
-      color: #ffdf6b;
-      margin-bottom: 10px;
-    }
-    button {
-      background: linear-gradient(135deg, #00ffcc, #0099ff);
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      padding: 10px 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background: linear-gradient(135deg, #00cc99, #0077cc);
-      transform: scale(1.05);
-    }
-    #orderForm {
-      display: none;
-      background: rgba(0,0,0,0.7);
-      padding: 25px;
-      border-radius: 16px;
-      margin-top: 25px;
-      animation: fadeIn 0.8s ease-in;
-    }
-    input {
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-      width: 80%;
-      margin: 6px 0;
-      text-align: center;
-      font-size: 15px;
-    }
-    #cartItems p {
-      text-align: left;
-      padding-left: 20px;
-    }
-    #totalPrice {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #00ffcc;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      opacity: 0.8;
-    }
-  </style>
+}
+</style>
 </head>
 <body>
-  <h1>🛍️ Welcome to Brocool Store</h1>
-  <div id="productList" class="product-container"></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4319423225607012"
+     crossorigin="anonymous"></script>
 
-  <div id="orderForm">
-    <h2>Your Cart 🛒</h2>
-    <div id="cartItems"></div>
-    <h3 id="totalPrice">Total: ₹0</h3>
+<header>
+<div class="logo">🔥 Brocool हिंदी</div>
+<p>स्मार्ट टिप्स और जानकारी — मोबाइल, होम, DIY और कमाई के आसान तरीके</p>
+</header>
+<nav>
+<a href="#" onclick="showHome()">होम</a>
+<a href="#post1" onclick="openPost('post1')">मोबाइल टिप्स</a>
+<a href="#post2" onclick="openPost('post2')">होम हैक्स</a>
+<a href="#post3" onclick="openPost('post3')">कमाई के तरीके</a>
+</nav>
+<div class="container" id="home">
+<div class="posts">
+<article class="post-card" onclick="openPost('post1')">
+<img src="https://source.unsplash.com/400x300/?mobile,battery" alt="मोबाइल टिप्स">
+<div class="post-content">
+<h3>मोबाइल की बैटरी बचाने के 10 आसान उपाय</h3>
+<p>जानिए कैसे सरल सेटिंग्स और स्मार्ट उपयोग से आप अपनी मोबाइल बैटरी को लंबे समय तक चल सकते हैं।</p>
+</div>
+</article>
+<article class="post-card" onclick="openPost('post2')">
+<img src="https://source.unsplash.com/400x300/?home,cleaning" alt="होम हैक्स">
+<div class="post-content">
+<h3>घर के 5 आसान और उपयोगी हैक्स</h3>
+<p>रसोई और घर की सफाई के लिए सरल, सुरक्षित और समय बचाने वाले उपाय।</p>
+</div>
+</article>
+<article class="post-card" onclick="openPost('post3')">
+<img src="https://source.unsplash.com/400x300/?earning,money" alt="कमाई के तरीके">
+<div class="post-content">
+<h3>घर बैठे कमाई के 7 बेहतरीन तरीके</h3>
+<p>नौकरी या निवेश के बिना आप कैसे स्मार्ट तरीके से घर बैठे पैसे कमा सकते हैं।</p>
+</div>
+</article>
+</div>
 
-    <h2>Enter Your Details</h2>
-    <input type="text" id="buyerName" placeholder="Your Name"><br>
-    <input type="text" id="buyerPhone" placeholder="Your Mobile Number"><br>
-    <input type="text" id="buyerAddress" placeholder="Your Address"><br>
-    <button onclick="sendWhatsAppOrder()">📱 Send on WhatsApp</button>
-    <button onclick="cancelOrder()">❌ Clear Cart</button><br><br>
-    <button onclick="closeForm()">🔙 Back to Shop</button>
-  </div>
+<div class="ad-container">
+    <div class="ad-label">विज्ञापन</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4319423225607012"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-  <footer>© 2025 Brocool.in | Designed with 💙 by Pravin</footer>
+<!-- Post 1 -->
+<section id="post1" class="full-post">
+<h1>मोबाइल की बैटरी बचाने के 10 आसान उपाय</h1>
+<img src="https://source.unsplash.com/800x400/?mobile,battery" alt="बैटरी बचाएं">
 
-  <script>
-    let cart = [];
-    const productList = document.getElementById("productList");
-    const cartItems = document.getElementById("cartItems");
-    const totalPriceEl = document.getElementById("totalPrice");
-    const products = JSON.parse(localStorage.getItem("brocoolProducts")) || [];
+<div class="ad-container">
+<div class="ad-label">विज्ञापन</div>
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4319423225607012"
+    data-ad-slot="0987654321"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-    function renderProducts() {
-      productList.innerHTML = "";
-      products.forEach((p, i) => {
-        productList.innerHTML += `
-          <div class="product">
-            <img src="${p.image}" alt="${p.name}">
-            <h3>${p.name}</h3>
-            <p>₹${p.price}</p>
-            <button onclick="addToCart(${i})">Add to Cart</button>
-          </div>`;
-      });
-    }
+<p>आज के स्मार्टफोन में बैटरी जल्दी खत्म होना आम समस्या है। इसे कम करने के लिए ये उपाय अपनाएँ:</p>
+<ul>
+<li><strong>बैकग्राउंड ऐप्स बंद करें:</strong> जिन ऐप्स का इस्तेमाल नहीं हो रहा है, उन्हें बंद रखें।</li>
+<li><strong>स्क्रीन ब्राइटनेस कम करें:</strong> ऑटो ब्राइटनेस या मैनुअल कम करें।</li>
+<li><strong>डार्क मोड:</strong> OLED/AMOLED स्क्रीन वाले फोन में डार्क मोड लगाएँ।</li>
+<li><strong>ऑटो-सिंक:</strong> ईमेल और सोशल मीडिया की ऑटो-सिंक को कंट्रोल करें।</li>
+<li><strong>नोटिफिकेशन:</strong> अनावश्यक नोटिफिकेशन बंद करें।</li>
+<li><strong>लो पावर मोड:</strong> बैटरी सेवर मोड ऑन करें।</li>
+<li><strong>चार्जिंग:</strong> गुणवत्ता वाले चार्जर और केबल का उपयोग करें।</li>
+<li><strong>एप्लिकेशन अपडेट:</strong> ऐप्स को लेटेस्ट वर्शन में अपडेट रखें।</li>
+<li><strong>स्थान और ब्लूटूथ:</strong> GPS, Bluetooth केवल जरूरत पड़ने पर ऑन करें।</li>
+<li><strong>रात में चार्जिंग:</strong> स्मार्ट चार्जिंग और बैटरी सेविंग मोड ऑन रखें।</li>
+</ul>
 
-    function addToCart(index) {
-      cart.push(products[index]);
-      updateCart();
-      document.getElementById("orderForm").style.display = "block";
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    }
+<p>इन उपायों से बैटरी की लाइफ बढ़ती है और फोन लंबे समय तक बेहतर चलता है।</p>
 
-    function updateCart() {
-      cartItems.innerHTML = "";
-      let total = 0;
-      cart.forEach((item, i) => {
-        total += Number(item.price);
-        cartItems.innerHTML += `<p>${i + 1}. ${item.name} - ₹${item.price}</p>`;
-      });
-      totalPriceEl.textContent = "Total: ₹" + total;
-    }
+<div class="content-images">
+<img src="https://source.unsplash.com/300x200/?smartphone,charging" alt="मोबाइल चार्जिंग">
+<img src="https://source.unsplash.com/300x200/?mobile,settings" alt="मोबाइल सेटिंग्स">
+<img src="https://source.unsplash.com/300x200/?battery,saving" alt="बैटरी सेविंग">
+</div>
 
-    function closeForm() {
-      document.getElementById("orderForm").style.display = "none";
-    }
+<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
+</section>
 
-    function sendWhatsAppOrder() {
-      const name = document.getElementById("buyerName").value;
-      const phone = document.getElementById("buyerPhone").value;
-      const address = document.getElementById("buyerAddress").value;
+<!-- Post 2 -->
+<section id="post2" class="full-post">
+<h1>घर के 5 आसान और उपयोगी हैक्स</h1>
+<img src="https://source.unsplash.com/800x400/?home,cleaning" alt="होम हैक्स">
 
-      if (!name || !phone || !address) return alert("Please fill all fields!");
+<div class="ad-container">
+<div class="ad-label">विज्ञापन</div>
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4319423225607012"
+    data-ad-slot="5544332211"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-      let orderList = cart.map((c, i) => `${i + 1}. ${c.name} - ₹${c.price}`).join("%0A");
-      let total = cart.reduce((sum, c) => sum + Number(c.price), 0);
+<p>घर को व्यवस्थित और साफ-सुथरा रखने के आसान उपाय:</p>
+<ul>
+<li>बेकिंग सोडा और सिरके से जिद्दी दाग हटाएँ।</li>
+<li>फ्रिज में कॉफी पाउडर रखकर गंध दूर करें।</li>
+<li>कपड़े जल्दी सुखाने के लिए अतिरिक्त स्पिन का उपयोग करें।</li>
+<li>बाथरूम शीशे पर टूथपेस्ट हल्का लगाएँ।</li>
+<li>रसायन मुक्त घरेलू उपायों से कीट नियंत्रण करें।</li>
+</ul>
 
-      const message = `Hello Brocool! 👋%0A
-New Order Details:%0A
-${orderList}%0A
---------------------%0A
-*Total: ₹${total}*%0A
---------------------%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Address: ${address}`;
+<div class="content-images">
+<img src="https://source.unsplash.com/300x200/?kitchen,cleaning" alt="रसोई सफाई">
+<img src="https://source.unsplash.com/300x200/?home,organization" alt="घर व्यवस्था">
+<img src="https://source.unsplash.com/300x200/?diy,home" alt="DIY घरेलू उपाय">
+</div>
 
-      const sellerPhone = "918459966421";
-      const url = `https://wa.me/${sellerPhone}?text=${message}`;
-      window.open(url, "_blank");
-    }
+<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
+</section>
 
-    function cancelOrder() {
-      cart = [];
-      updateCart();
-      alert("Your cart has been cleared!");
-    }
+<!-- Post 3 -->
+<section id="post3" class="full-post">
+<h1>घर बैठे कमाई के 7 बेहतरीन तरीके</h1>
+<img src="https://source.unsplash.com/800x400/?earning,money" alt="कमाई के तरीके">
 
-    renderProducts();
-  </script>
+<div class="ad-container"> 
+<div class="ad-label">विज्ञापन</div>
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4319423225607012"
+    data-ad-slot="6677889900"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<p>घर बैठे पैसे कमाने के स्मार्ट तरीके:</p>
+<ul>
+<li>फ्रीलांसिंग — कंटेंट राइटिंग, ग्राफिक डिजाइन, वेब डेवलपमेंट।</li>
+<li>डेटा एंट्री और वॉइस ओवर काम।</li>
+<li>सोशल मीडिया मैनेजमेंट और डिजिटल मार्केटिंग।</li>
+<li>लोकल ड्रॉपशिपिंग और ऑनलाइन बिक्री।</li>
+<li>माइक्रोटास्क प्लेटफॉर्म्स पर छोटे प्रोजेक्ट्स।</li>
+<li>ऑनलाइन सर्वे और समीक्षा लिखना।</li>
+<li>कस्टम डिज़ाइन और DIY प्रोडक्ट्स ऑनलाइन बेचें।</li>
+</ul>
+
+<div class="content-images">
+<img src="https://source.unsplash.com/300x200/?freelancing,work" alt="फ्रीलांसिंग">
+<img src="https://source.unsplash.com/300x200/?online,business" alt="ऑनलाइन बिजनेस">
+<img src="https://source.unsplash.com/300x200/?earning,digital" alt="डिजिटल कमाई">
+</div>
+
+<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
+</section>
+
+</div>
+<footer>
+© 2025 Brocool.in — स्मार्ट और आसान जानकारी। सभी इमेज कॉपीराइट फ्री हैं।
+</footer>
+
+<script>
+function openPost(id){
+  document.querySelectorAll('.full-post').forEach(s => s.classList.remove('active'));
+  var el = document.getElementById(id);
+  if(el){ el.classList.add('active'); el.scrollIntoView({behavior:'smooth'}); }
+}
+function closePost(){
+  document.querySelectorAll('.full-post').forEach(s => s.classList.remove('active'));
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function showHome(){ closePost(); }
+</script>
 </body>
-</html>
+  </html>
+
