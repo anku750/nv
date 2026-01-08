@@ -1,364 +1,1473 @@
 <!DOCTYPE html>
 <html lang="hi">
- <head>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brocool.in — स्मार्ट टिप्स और जानकारी</title>
-<meta name="description" content="Brocool — रोजाना मोबाइल टिप्स, होम हैक्स, DIY प्रोजेक्ट्स और कमाई के आसान तरीके। सभी जानकारी हिंदी में।" />
-<meta name="keywords" content="मोबाइल टिप्स, होम हैक्स, DIY, कमाई के तरीके, Brocool" />
-<meta name="google-adsense-account" content="ca-pub-4319423225607012">
+<title>Brocool – Premium Event Decoration Services</title>
+
 <style>
-:root {
-    --primary1: #1e3c72;
-    --primary2: #2a5298;
-    --primary3: #6dd5ed;
-    --primary4: #2193b0;
-    --primary5: #00c6ff;
-    --bg: #f9f9f9;
-    --card: #ffffff;
-    --text: #000000;
-    --muted: #333;
-    --maxw: 1200px;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-body { background: var(--bg); color: var(--text); }
-header { 
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3') center/cover no-repeat; 
-    color: #fff; 
-    padding: 40px 20px; 
-    text-align: center; 
-}
-header .logo { font-size: 32px; font-weight: 800; }
-nav { 
-    background: #fff; 
-    padding: 15px; 
-    display: flex; 
-    justify-content: center; 
-    gap: 15px; 
-    position: sticky; 
-    top: 0; 
-    box-shadow: 0 3px 10px rgba(0,0,0,.1); 
-    z-index: 50; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Moving Gradient Button Design */
-nav a { 
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: 600; 
-    padding: 12px 25px;
-    border-radius: 25px; 
-    transition: all 0.3s ease; 
-    position: relative; 
-    overflow: hidden; 
-    background: linear-gradient(135deg, 
-        #ff6b6b, #ffa726, #ffee58, #4caf50, 
-        #2196f3, #9c27b0, #ff6b6b);
-    background-size: 400% 400%;
-    animation: movingGradient 8s ease infinite;
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-    border: none;
-    cursor: pointer;
-    text-align: center;
+body {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🌟 ANIMATIONS */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🏢 CONTAINER */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 🎪 SUPER COLORFUL HEADER */
+.main-header {
+  background: linear-gradient(45deg, 
+    #ff0080, #ff8c00, #40e0d0, #ff0080, 
+    #9d50bb, #6e48aa, #ff0080);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 0 0 60px 60px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
+.logo-main {
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 
+    3px 3px 0 #ff0080,
+    6px 6px 0 #ff8c00,
+    9px 9px 0 #40e0d0;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+  animation: pulse 3s infinite;
+}
+
+.tagline-main {
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.sub-tagline {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* 🏆 STATS COUNTER */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 25px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  min-width: 180px;
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  border-color: #ffd700;
+  box-shadow: 0 15px 30px rgba(255,215,0,0.2);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  color: #b0bec5;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🎨 THEME SECTIONS */
+.section-header {
+  text-align: center;
+  margin: 80px 0 50px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  display: inline-block;
+  position: relative;
+  padding: 0 30px;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '✨';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  animation: float 3s infinite;
+}
+
+.section-title::before {
+  left: -20px;
+}
+
+.section-title::after {
+  right: -20px;
+}
+
+/* 🎭 EVENT THEMES GRID */
+.themes-master-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.theme-card-premium {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid transparent;
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.theme-card-premium:nth-child(1) { animation-delay: 0.1s; }
+.theme-card-premium:nth-child(2) { animation-delay: 0.2s; }
+.theme-card-premium:nth-child(3) { animation-delay: 0.3s; }
+.theme-card-premium:nth-child(4) { animation-delay: 0.4s; }
+
+.theme-card-premium:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: #ff0080;
+  box-shadow: 
+    0 20px 40px rgba(255,0,128,0.3),
+    0 0 100px rgba(255,0,128,0.1);
+}
+
+.theme-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.theme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.theme-card-premium:hover .theme-image {
+  transform: scale(1.1);
+}
+
+.theme-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.theme-content-premium {
+  padding: 30px;
+}
+
+.theme-title-premium {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #40e0d0, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-description-premium {
+  color: #b0bec5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.theme-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.feature-tag {
+  background: rgba(64, 224, 208, 0.1);
+  color: #40e0d0;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(64, 224, 208, 0.3);
+}
+
+/* 📋 BOOKING FORM ENHANCED */
+.booking-form-container {
+  background: linear-gradient(135deg, 
+    rgba(255,0,128,0.1), 
+    rgba(255,140,0,0.1),
+    rgba(64,224,208,0.1));
+  border-radius: 35px;
+  padding: 60px;
+  margin: 80px 0;
+  border: 3px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.form-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-grid-advanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.form-group-premium {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-label i {
+  color: #ff8c00;
+  font-size: 1.2rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.form-input-premium {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.form-input-premium:focus {
+  outline: none;
+  border-color: #ff0080;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 0 4px rgba(255,0,128,0.2);
+}
+
+.form-input-premium::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* 📸 MEGA GALLERY */
+.gallery-mega {
+  margin: 100px 0;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.gallery-item-premium {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid transparent;
+}
+
+.gallery-item-premium:hover {
+  transform: scale(1.08) rotate(3deg);
+  border-color: #ff8c00;
+  box-shadow: 
+    0 20px 40px rgba(255,140,0,0.4),
+    0 0 80px rgba(255,140,0,0.2);
+  z-index: 10;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item-premium:hover .gallery-image {
+  transform: scale(1.15);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 25px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item-premium:hover .gallery-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-caption-premium {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.gallery-description {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* 🎭 EVENT TYPES SHOWCASE */
+.event-types-showcase {
+  background: linear-gradient(135deg, 
+    rgba(157,80,187,0.1), 
+    rgba(110,72,170,0.1));
+  border-radius: 35px;
+  padding: 60px;
+  margin: 80px 0;
+}
+
+.event-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.event-type-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.event-type-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.12);
+  border-color: #9d50bb;
+}
+
+.event-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #9d50bb;
+}
+
+.event-type-name {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* 🖼️ ULTIMATE ALBUM SECTION */
+.album-ultimate-section {
+  background: linear-gradient(135deg, 
+    rgba(255,0,128,0.08), 
+    rgba(255,140,0,0.08),
+    rgba(64,224,208,0.08));
+  border-radius: 40px;
+  padding: 80px 40px;
+  margin: 100px 0;
+  border: 4px dashed rgba(255,255,255,0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.album-ultimate-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,0,128,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,140,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(64,224,208,0.1) 0%, transparent 50%);
+}
+
+.album-title-ultimate {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.album-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.album-placeholder-ultimate {
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
+  padding: 80px 40px;
+  border: 3px dashed rgba(255,255,255,0.3);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+.upload-icon-main {
+  font-size: 6rem;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 30px;
+  animation: float 3s infinite;
+}
+
+.album-placeholder-text {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* 🚀 BUTTONS ENHANCED */
+.btn-ultimate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-ultimate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,255,255,0.2), 
+    transparent);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.btn-ultimate:hover::before {
+  left: 100%;
+}
+
+.btn-primary-ultimate {
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+  color: white;
+  min-width: 300px;
+  margin: 30px auto;
+  display: block;
+}
+
+.btn-primary-ultimate:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 20px 40px rgba(255,0,128,0.4),
+    0 0 100px rgba(255,140,0,0.3);
+}
+
+.btn-secondary-ultimate {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary-ultimate:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #ff0080;
+  transform: translateY(-3px);
+}
+
+/* 📱 FLOATING ACTION MENU */
+.floating-action-menu {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.floating-main-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(255,0,128,0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid rgba(255,255,255,0.2);
+}
+
+.floating-main-btn:hover {
+  transform: scale(1.15) rotate(90deg);
+  box-shadow: 0 15px 35px rgba(255,0,128,0.6);
+}
+
+.floating-sub-btns {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.floating-sub-btns.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-sub-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #40e0d0, #9d50bb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  transform: scale(0);
+}
+
+.floating-sub-btns.show .floating-sub-btn {
+  transform: scale(1);
+}
+
+.floating-sub-btn:nth-child(1) { transition-delay: 0.1s; }
+.floating-sub-btn:nth-child(2) { transition-delay: 0.2s; }
+.floating-sub-btn:nth-child(3) { transition-delay: 0.3s; }
+
+.floating-sub-btn:hover {
+  transform: scale(1.1) !important;
+}
+
+/* 🌟 RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  
+  .logo-main {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .logo-main {
+    font-size: 3rem;
+    text-shadow: 
+      2px 2px 0 #ff0080,
+      4px 4px 0 #ff8c00;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .themes-master-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-form-container {
+    padding: 30px;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+  }
+  
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .floating-action-menu {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .floating-main-btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-main {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .stat-item {
     min-width: 140px;
-}
-
-@keyframes movingGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-nav a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,.3);
-    animation-duration: 4s;
-}
-
-nav a:active {
-    transform: translateY(-1px);
-}
-
-/* Read Button with Moving Gradient */
-.read-btn { 
-    display: inline-block; 
-    margin-top: 10px; 
-    padding: 10px 20px; 
-    background: linear-gradient(135deg, 
-        #ff6b6b, #ffa726, #ffee58, #4caf50, 
-        #2196f3, #9c27b0, #ff6b6b);
-    background-size: 400% 400%;
-    animation: movingGradient 8s ease infinite;
-    color: #fff; 
-    border-radius: 8px; 
-    text-decoration: none; 
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-    transition: all 0.3s ease;
-}
-
-.read-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,.3);
-    animation-duration: 4s;
-}
-
-.container { max-width: var(--maxw); margin: 30px auto; padding: 0 20px; }
-.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
-.post-card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.05); transition: transform 0.25s; cursor: pointer; }
-.post-card:hover { transform: translateY(-5px); }
-.post-card img { width: 100%; height: 200px; object-fit: cover; }
-.post-content { padding: 15px; }
-.post-content h3 { font-size: 20px; margin-bottom: 10px; color: var(--primary2); }
-.post-content p { color: var(--muted); line-height: 1.6; }
-.full-post { display: none; background: var(--card); padding: 25px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.08); margin-top: 25px; }
-.full-post.active { display: block; }
-.full-post img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-.full-post h1 { margin-bottom: 15px; color: var(--primary1); }
-.full-post p { margin-bottom: 15px; line-height: 1.7; color: var(--text); }
-.content-images { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
-.content-images img { flex: 1; min-width: 200px; height: 150px; object-fit: cover; border-radius: 8px; }
-.ad-container { margin: 25px 0; text-align: center; padding: 15px; background: #f5f5f5; border-radius: 8px; }
-.ad-label { font-size: 12px; color: #666; margin-bottom: 5px; text-transform: uppercase; }
-footer { text-align: center; padding: 20px; background: #111; color: #fff; margin-top: 40px; border-top: 4px solid rgba(255,255,255,.1); }
-
-@media(max-width: 640px) { 
-    .post-card img { height: 150px; } 
-    .full-post img { height: 220px; } 
-    header .logo { font-size: 26px; } 
-    .content-images img { min-width: 100%; }
-    nav { flex-wrap: colam; gap: 2px; }
-    nav a { 
-        padding: 7px 6px; 
-        font-size: 10px; 
-        min-width: 90px;
-        animation: movingGradient 6s ease infinite;
-    }
-    .read-btn {
-        animation: movingGradient 6s ease infinite;
-    }
-}
-
-/* Additional animation for better performance */
-@media (prefers-reduced-motion: reduce) {
-    nav a, .read-btn {
-        animation: none;
-        background: linear-gradient(135deg, #2196f3, #9c27b0);
-    }
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .btn-ultimate {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
 }
 </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4319423225607012"
-     crossorigin="anonymous"></script>
 
-<header>
-<div class="logo">🔥 Brocool हिंदी</div>
-<p>स्मार्ट टिप्स और जानकारी — मोबाइल, होम, DIY और कमाई के आसान तरीके</p>
-</header>
-<nav>
-<a href="#" onclick="showHome()">होम</a>
-<a href="#post1" onclick="openPost('post1')">मोबाइल टिप्स</a>
-<a href="#post2" onclick="openPost('post2')">होम हैक्स</a>
-<a href="#post3" onclick="openPost('post3')">कमाई के तरीके</a>
-</nav>
-<div class="container" id="home">
- <div class=" posts">
-   <article class="post-card">
-     <a href="https://anku750.github.io/Top-10-tips-phone/"> 
- <div class="post-content">
-    <h3> top 10 tips</h3>
-    <p>mobail 📱</p>
-   </a>
- </div>
-</article>
- <div class="container" id="home">
- <div class=" posts">
-   <article class="post-card">
-     <a href="https://anku750.github.io/Keshaw-Maharaj-/"> 
- <div class="post-content">
-    <h3>Keshav Maharaj — </h3>
-    <p>दक्षिण अफ़्रीका का स्पिन मास्टर</p>
-  </a>
- </div>
-</article>
- <div class="container" id="home">
- <div class=" posts">
-   <article class="post-card">
-     <a href="https://anku750.github.io/motion-director.html/"> 
- <div class="post-content">
-    <h3>Motion Director क्या है? पूरा Explained</h3>
-    <p>Motion director phone feature ka full explain + uses + settings...</p>
+<!-- 🌟 FLOATING ACTION MENU -->
+<div class="floating-action-menu">
+  <div class="floating-main-btn" onclick="toggleFloatingMenu()">
+    <i class="fas fa-plus"></i>
+  </div>
+  
+  <div class="floating-sub-btns" id="floatingSubBtns">
+    <a href="#" id="whatsappFloatBtn" class="floating-sub-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
     </a>
-</div>
- </article>
-<div class="container" id="home">
-<div class=" posts">
-<article class="post-card" onclick="openPost('post1')">
-<img src="https://source.unsplash.com/400x300/?mobile,battery" alt="मोबाइल टिप्स">
-<div class="post-content">
-<h3>मोबाइल की बैटरी बचाने के 10 आसान उपाय</h3>
-<p>जानिए कैसे सरल सेटिंग्स और स्मार्ट उपयोग से आप अपनी मोबाइल बैटरी को लंबे समय तक चल सकते हैं।</p>
-</div>
-</article>
-<article class="post-card" onclick="openPost('post2')">
-<img src="https://source.unsplash.com/400x300/?home,cleaning" alt="होम हैक्स">
-<div class="post-content">
-<h3>घर के 5 आसान और उपयोगी हैक्स</h3>
-<p>रसोई और घर की सफाई के लिए सरल, सुरक्षित और समय बचाने वाले उपाय।</p>
-</div>
-</article>
-<article class="post-card" onclick="openPost('post3')">
-<img src="https://source.unsplash.com/400x300/?earning,money" alt="कमाई के तरीके">
-<div class="post-content">
-<h3>घर बैठे कमाई के 7 बेहतरीन तरीके</h3>
-<p>नौकरी या निवेश के बिना आप कैसे स्मार्ट तरीके से घर बैठे पैसे कमा सकते हैं।</p>
-</div>
-</article>
+    <a href="admin.html" class="floating-sub-btn">
+      <i class="fas fa-user-shield"></i>
+    </a>
+    <a href="#" class="floating-sub-btn" onclick="scrollToAlbum()">
+      <i class="fas fa-images"></i>
+    </a>
+  </div>
 </div>
 
-<div class="ad-container">
-    <div class="ad-label">विज्ञापन</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4319423225607012"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="container">
+  <!-- 🎪 ULTIMATE HEADER -->
+  <header class="main-header">
+    <h1 class="logo-main">BROCOOL</h1>
+    <p class="tagline-main">✨ Premium Event Decoration Services ✨</p>
+    <p class="sub-tagline">We create magical moments with breathtaking decorations for weddings, birthdays, corporate events, and all your special occasions</p>
+    
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number" id="projectsCount">250+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="happyClients">500+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="eventsCount">1000+</div>
+        <div class="stat-label">Events Decorated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="citiesCount">25+</div>
+        <div class="stat-label">Cities Covered</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🎭 ULTIMATE EVENT THEMES -->
+  <section class="themes-section">
+    <div class="section-header">
+      <h2 class="section-title">Our Signature Themes</h2>
+    </div>
+    
+    <div class="themes-master-grid">
+      <!-- Theme 1: Royal Elegance -->
+      <div class="theme-card-premium">
+        <div class="theme-image-container">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+               class="theme-image" 
+               alt="Royal Wedding Decoration">
+          <div class="theme-badge">Most Popular</div>
+        </div>
+        <div class="theme-content-premium">
+          <h3 class="theme-title-premium">👑 Royal Elegance</h3>
+          <p class="theme-description-premium">Experience regal luxury with gold and maroon themes, crystal chandeliers, and velvet drapes for a majestic celebration.</p>
+          <div class="theme-features">
+            <span class="feature-tag">Gold Accents</span>
+            <span class="feature-tag">Crystal Decor</span>
+            <span class="feature-tag">Velvet Fabrics</span>
+          </div>
+          <button class="btn-secondary-ultimate" onclick="selectTheme('Royal Elegance')">
+            <i class="fas fa-crown"></i> Select This Theme
+          </button>
+        </div>
+      </div>
+      
+      <!-- Theme 2: Modern Glam -->
+      <div class="theme-card-premium">
+        <div class="theme-image-container">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+               class="theme-image" 
+               alt="Modern Birthday Decoration">
+          <div class="theme-badge">Trending</div>
+        </div>
+        <div class="theme-content-premium">
+          <h3 class="theme-title-premium">🌟 Modern Glam</h3>
+          <p class="theme-description-premium">Contemporary designs with geometric patterns, LED lighting, and minimalist elegance for stylish celebrations.</p>
+          <div class="theme-features">
+            <span class="feature-tag">LED Lighting</span>
+            <span class="feature-tag">Geometric Design</span>
+            <span class="feature-tag">Minimalist</span>
+          </div>
+          <button class="btn-secondary-ultimate" onclick="selectTheme('Modern Glam')">
+            <i class="fas fa-star"></i> Select This Theme
+          </button>
+        </div>
+      </div>
+      
+      <!-- Theme 3: Traditional Bliss -->
+      <div class="theme-card-premium">
+        <div class="theme-image-container">
+          <img src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+               class="theme-image" 
+               alt="Traditional Indian Decoration">
+          <div class="theme-badge">Classic</div>
+        </div>
+        <div class="theme-content-premium">
+          <h3 class="theme-title-premium">🪔 Traditional Bliss</h3>
+          <p class="theme-description-premium">Embrace cultural richness with marigold flowers, traditional motifs, and ethnic decor elements.</p>
+          <div class="theme-features">
+            <span class="feature-tag">Marigold Flowers</span>
+            <span class="feature-tag">Traditional Motifs</span>
+            <span class="feature-tag">Ethnic Decor</span>
+          </div>
+          <button class="btn-secondary-ultimate" onclick="selectTheme('Traditional Bliss')">
+            <i class="fas fa-palette"></i> Select This Theme
+          </button>
+        </div>
+      </div>
+      
+      <!-- Theme 4: Nature's Dream -->
+      <div class="theme-card-premium">
+        <div class="theme-image-container">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+               class="theme-image" 
+               alt="Nature Theme Decoration">
+          <div class="theme-badge">Eco-Friendly</div>
+        </div>
+        <div class="theme-content-premium">
+          <h3 class="theme-title-premium">🌿 Nature's Dream</h3>
+          <p class="theme-description-premium">Bring the outdoors inside with lush greenery, floral installations, and sustainable decor elements.</p>
+          <div class="theme-features">
+            <span class="feature-tag">Green Installations</span>
+            <span class="feature-tag">Floral Decor</span>
+            <span class="feature-tag">Sustainable</span>
+          </div>
+          <button class="btn-secondary-ultimate" onclick="selectTheme('Nature's Dream')">
+            <i class="fas fa-leaf"></i> Select This Theme
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📋 ULTIMATE BOOKING FORM -->
+  <section class="booking-form-container">
+    <h2 class="form-title">Book Your Dream Event</h2>
+    
+    <div class="form-grid-advanced">
+      <div class="form-group-premium">
+        <label class="form-label" for="clientName">
+          <i class="fas fa-user-circle"></i> Your Full Name *
+        </label>
+        <div class="input-group">
+          <input type="text" 
+                 id="clientName" 
+                 class="form-input-premium" 
+                 placeholder="Enter your full name"
+                 required>
+        </div>
+      </div>
+      
+      <div class="form-group-premium">
+        <label class="form-label" for="clientMobile">
+          <i class="fas fa-phone-alt"></i> Mobile Number *
+        </label>
+        <div class="input-group">
+          <input type="tel" 
+                 id="clientMobile" 
+                 class="form-input-premium" 
+                 placeholder="10-digit mobile number"
+                 required>
+        </div>
+      </div>
+      
+      <div class="form-group-premium">
+        <label class="form-label" for="clientEmail">
+          <i class="fas fa-envelope"></i> Email Address
+        </label>
+        <div class="input-group">
+          <input type="email" 
+                 id="clientEmail" 
+                 class="form-input-premium" 
+                 placeholder="your.email@example.com">
+        </div>
+      </div>
+      
+      <div class="form-group-premium">
+        <label class="form-label" for="eventType">
+          <i class="fas fa-calendar-star"></i> Event Type *
+        </label>
+        <div class="input-group">
+          <select id="eventType" class="form-input-premium" required>
+            <option value="">Select event type</option>
+            <option>Wedding Ceremony</option>
+            <option>Reception Party</option>
+            <option>Birthday Celebration</option>
+            <option>Engagement Function</option>
+            <option>Anniversary Party</option>
+            <option>Baby Shower</option>
+            <option>Corporate Event</option>
+            <option>Haldi/Mehendi</option>
+            <option>House Warming</option>
+            <option>Other Special Event</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group-premium">
+        <label class="form-label" for="eventDate">
+          <i class="fas fa-calendar-day"></i> Event Date *
+        </label>
+        <div class="input-group">
+          <input type="date" 
+                 id="eventDate" 
+                 class="form-input-premium" 
+                 required>
+        </div>
+      </div>
+      
+      <div class="form-group-premium">
+        <label class="form-label" for="eventGuests">
+          <i class="fas fa-users"></i> Expected Guests *
+        </label>
+        <div class="input-group">
+          <input type="number" 
+                 id="eventGuests" 
+                 class="form-input-premium" 
+                 placeholder="Approximate number"
+                 min="10"
+                 required>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group-premium">
+      <label class="form-label" for="eventAddress">
+        <i class="fas fa-map-marked-alt"></i> Event Venue Address *
+      </label>
+      <div class="input-group">
+        <textarea id="eventAddress" 
+                  class="form-input-premium" 
+                  rows="4" 
+                  placeholder="Complete venue address with landmark"
+                  required></textarea>
+      </div>
+    </div>
+    
+    <div class="form-group-premium">
+      <label class="form-label" for="budgetRange">
+        <i class="fas fa-rupee-sign"></i> Budget Range *
+      </label>
+      <div class="input-group">
+        <select id="budgetRange" class="form-input-premium" required>
+          <option value="">Select your budget</option>
+          <option>₹25,000 - ₹50,000</option>
+          <option>₹50,000 - ₹1,00,000</option>
+          <option>₹1,00,000 - ₹2,50,000</option>
+          <option>₹2,50,000 - ₹5,00,000</option>
+          <option>₹5,00,000+</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="form-group-premium">
+      <label class="form-label" for="specialRequests">
+        <i class="fas fa-lightbulb"></i> Special Requests
+      </label>
+      <div class="input-group">
+        <textarea id="specialRequests" 
+                  class="form-input-premium" 
+                  rows="3" 
+                  placeholder="Any specific requirements or theme preferences"></textarea>
+      </div>
+    </div>
+    
+    <button class="btn-primary-ultimate" onclick="validateAndSubmitBooking()">
+      <i class="fas fa-rocket"></i> Submit Booking Request
+    </button>
+  </section>
+
+  <!-- 📸 ULTIMATE GALLERY -->
+  <section class="gallery-mega">
+    <div class="section-header">
+      <h2 class="section-title">Our Masterpieces</h2>
+    </div>
+    
+    <div class="gallery-container">
+      <!-- Gallery Item 1 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Grand Wedding Stage">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Grand Wedding Stage</h4>
+          <p class="gallery-description">Elegant floral canopy with crystal curtains</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Birthday Balloon Arch">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Birthday Balloon Arch</h4>
+          <p class="gallery-description">Colorful balloon installation entrance</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Corporate Event Setup">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Corporate Event Setup</h4>
+          <p class="gallery-description">Professional conference decoration</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Floral Mandap Design">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Floral Mandap Design</h4>
+          <p class="gallery-description">Traditional wedding mandap with fresh flowers</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 5 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Luxury Table Setting">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Luxury Table Setting</h4>
+          <p class="gallery-description">Premium table decor for special occasions</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 -->
+      <div class="gallery-item-premium">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+             class="gallery-image" 
+             alt="Outdoor Garden Party">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Outdoor Garden Party</h4>
+          <p class="gallery-description">Natural garden wedding setup</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎭 EVENT TYPES SHOWCASE -->
+  <section class="event-types-showcase">
+    <div class="section-header">
+      <h2 class="section-title">We Decorate All Events</h2>
+    </div>
+    
+    <div class="event-types-grid">
+      <div class="event-type-card">
+        <div class="event-icon">💒</div>
+        <h3 class="event-type-name">Weddings</h3>
+        <p class="theme-description-premium">Complete wedding decor solutions</p>
+      </div>
+      
+      <div class="event-type-card">
+        <div class="event-icon">🎂</div>
+        <h3 class="event-type-name">Birthdays</h3>
+        <p class="theme-description-premium">Themed birthday parties</p>
+      </div>
+      
+      <div class="event-type-card">
+        <div class="event-icon">🏢</div>
+        <h3 class="event-type-name">Corporate</h3>
+        <p class="theme-description-premium">Professional event setups</p>
+      </div>
+      
+      <div class="event-type-card">
+        <div class="event-icon">👶</div>
+        <h3 class="event-type-name">Baby Showers</h3>
+        <p class="theme-description-premium">Cute baby shower themes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🖼️ ULTIMATE ALBUM SECTION -->
+  <section class="album-ultimate-section" id="ultimateAlbum">
+    <h2 class="album-title-ultimate">📁 Our Project Album</h2>
+    <p class="album-subtitle">Explore our collection of completed projects. Each event is uniquely decorated to match our client's vision and create unforgettable memories.</p>
+    
+    <div class="album-placeholder-ultimate">
+      <div class="upload-icon-main">
+        <i class="fas fa-cloud-upload-alt"></i>
+      </div>
+      <p class="album-placeholder-text">🎪 Your Decoration Projects Will Appear Here 🎪</p>
+      <p style="color: rgba(255,255,255,0.5); font-size: 1.1rem; margin-bottom: 40px;">
+        Upload images through the admin panel to build your portfolio
+      </p>
+      
+      <!-- Dynamic User Images -->
+      <div id="userGalleryDynamic" style="margin-top: 40px;">
+        <!-- User uploaded images will load here -->
+      </div>
+      
+      <a href="admin.html" class="btn-primary-ultimate" style="display: inline-flex;">
+        <i class="fas fa-upload"></i> Upload New Images
+      </a>
+    </div>
+  </section>
 </div>
-
-<!-- Post 1 -->
-<section id="post1" class="full-post">
-<h1>मोबाइल की बैटरी बचाने के 10 आसान उपाय</h1>
-<img src="https://source.unsplash.com/800x400/?mobile,battery" alt="बैटरी बचाएं">
-
-<div class="ad-container">
-<div class="ad-label">विज्ञापन</div>
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4319423225607012"
-    data-ad-slot="0987654321"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<p>आज के स्मार्टफोन में बैटरी जल्दी खत्म होना आम समस्या है। इसे कम करने के लिए ये उपाय अपनाएँ:</p>
-<ul>
-<li><strong>बैकग्राउंड ऐप्स बंद करें:</strong> जिन ऐप्स का इस्तेमाल नहीं हो रहा है, उन्हें बंद रखें।</li>
-<li><strong>स्क्रीन ब्राइटनेस कम करें:</strong> ऑटो ब्राइटनेस या मैनुअल कम करें।</li>
-<li><strong>डार्क मोड:</strong> OLED/AMOLED स्क्रीन वाले फोन में डार्क मोड लगाएँ।</li>
-<li><strong>ऑटो-सिंक:</strong> ईमेल और सोशल मीडिया की ऑटो-सिंक को कंट्रोल करें।</li>
-<li><strong>नोटिफिकेशन:</strong> अनावश्यक नोटिफिकेशन बंद करें।</li>
-<li><strong>लो पावर मोड:</strong> बैटरी सेवर मोड ऑन करें।</li>
-<li><strong>चार्जिंग:</strong> गुणवत्ता वाले चार्जर और केबल का उपयोग करें।</li>
-<li><strong>एप्लिकेशन अपडेट:</strong> ऐप्स को लेटेस्ट वर्शन में अपडेट रखें।</li>
-<li><strong>स्थान और ब्लूटूथ:</strong> GPS, Bluetooth केवल जरूरत पड़ने पर ऑन करें।</li>
-<li><strong>रात में चार्जिंग:</strong> स्मार्ट चार्जिंग और बैटरी सेविंग मोड ऑन रखें।</li>
-</ul>
-
-<p>इन उपायों से बैटरी की लाइफ बढ़ती है और फोन लंबे समय तक बेहतर चलता है।</p>
-
-<div class="content-images">
-<img src="https://source.unsplash.com/300x200/?smartphone,charging" alt="मोबाइल चार्जिंग">
-<img src="https://source.unsplash.com/300x200/?mobile,settings" alt="मोबाइल सेटिंग्स">
-<img src="https://source.unsplash.com/300x200/?battery,saving" alt="बैटरी सेविंग">
-</div>
-
-<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
-</section>
-
-<!-- Post 2 -->
-<section id="post2" class="full-post">
-<h1>घर के 5 आसान और उपयोगी हैक्स</h1>
-<img src="https://source.unsplash.com/800x400/?home,cleaning" alt="होम हैक्स">
-
-<div class="ad-container">
-<div class="ad-label">विज्ञापन</div>
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4319423225607012"
-    data-ad-slot="5544332211"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<p>घर को व्यवस्थित और साफ-सुथरा रखने के आसान उपाय:</p>
-<ul>
-<li>बेकिंग सोडा और सिरके से जिद्दी दाग हटाएँ।</li>
-<li>फ्रिज में कॉफी पाउडर रखकर गंध दूर करें।</li>
-<li>कपड़े जल्दी सुखाने के लिए अतिरिक्त स्पिन का उपयोग करें।</li>
-<li>बाथरूम शीशे पर टूथपेस्ट हल्का लगाएँ।</li>
-<li>रसायन मुक्त घरेलू उपायों से कीट नियंत्रण करें।</li>
-</ul>
-
-<div class="content-images">
-<img src="https://source.unsplash.com/300x200/?kitchen,cleaning" alt="रसोई सफाई">
-<img src="https://source.unsplash.com/300x200/?home,organization" alt="घर व्यवस्था">
-<img src="https://source.unsplash.com/300x200/?diy,home" alt="DIY घरेलू उपाय">
-</div>
-
-<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
-</section>
-
-<!-- Post 3 -->
-<section id="post3" class="full-post">
-<h1>घर बैठे कमाई के 7 बेहतरीन तरीके</h1>
-<img src="https://source.unsplash.com/800x400/?earning,money" alt="कमाई के तरीके">
-
-<div class="ad-container"> 
-<div class="ad-label">विज्ञापन</div>
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4319423225607012"
-    data-ad-slot="6677889900"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<p>घर बैठे पैसे कमाने के स्मार्ट तरीके:</p>
-<ul>
-<li>फ्रीलांसिंग — कंटेंट राइटिंग, ग्राफिक डिजाइन, वेब डेवलपमेंट।</li>
-<li>डेटा एंट्री और वॉइस ओवर काम।</li>
-<li>सोशल मीडिया मैनेजमेंट और डिजिटल मार्केटिंग।</li>
-<li>लोकल ड्रॉपशिपिंग और ऑनलाइन बिक्री।</li>
-<li>माइक्रोटास्क प्लेटफॉर्म्स पर छोटे प्रोजेक्ट्स।</li>
-<li>ऑनलाइन सर्वे और समीक्षा लिखना।</li>
-<li>कस्टम डिज़ाइन और DIY प्रोडक्ट्स ऑनलाइन बेचें।</li>
-</ul>
-
-<div class="content-images">
-<img src="https://source.unsplash.com/300x200/?freelancing,work" alt="फ्रीलांसिंग">
-<img src="https://source.unsplash.com/300x200/?online,business" alt="ऑनलाइन बिजनेस">
-<img src="https://source.unsplash.com/300x200/?earning,digital" alt="डिजिटल कमाई">
-</div>
-
-<a class="read-btn" href="#" onclick="closePost()">वापस जाएँ</a>
-</section>
-
-</div>
-<footer>
-© 2025 Brocool.in — स्मार्ट और आसान जानकारी। सभी इमेज कॉपीराइट फ्री हैं।
-</footer>
 
 <script>
-function openPost(id){
-  document.querySelectorAll('.full-post').forEach(s => s.classList.remove('active'));
-  var el = document.getElementById(id);
-  if(el){ el.classList.add('active'); el.scrollIntoView({behavior:'smooth'}); }
+// WhatsApp Number
+const WHATSAPP_NUMBER = '918459966421';
+
+// Floating Menu Toggle
+let floatingMenuOpen = false;
+function toggleFloatingMenu() {
+  const subBtns = document.getElementById('floatingSubBtns');
+  floatingMenuOpen = !floatingMenuOpen;
+  
+  if (floatingMenuOpen) {
+    subBtns.classList.add('show');
+    document.querySelector('.floating-main-btn i').className = 'fas fa-times';
+  } else {
+    subBtns.classList.remove('show');
+    document.querySelector('.floating-main-btn i').className = 'fas fa-plus';
+  }
 }
-function closePost(){
-  document.querySelectorAll('.full-post').forEach(s => s.classList.remove('active'));
-  window.scrollTo({top:0, behavior:'smooth'});
+
+// Load User Gallery from LocalStorage
+function loadUserGallery() {
+  const galleryContainer = document.getElementById('userGalleryDynamic');
+  const images = JSON.parse(localStorage.getItem('brocoolImages') || '[]');
+  
+  galleryContainer.innerHTML = '';
+  
+  if (images.length > 0) {
+    const galleryHTML = `
+      <div style="margin-bottom: 40px;">
+        <h3 style="color: white; font-size: 2rem; margin-bottom: 30px; text-align: center;">
+          📸 Your Uploaded Projects (${images.length})
+        </h3>
+        <div class="gallery-container" id="dynamicUserImages">
+        </div>
+      </div>
+    `;
+    
+    galleryContainer.innerHTML = galleryHTML;
+    
+    const dynamicGrid = document.getElementById('dynamicUserImages');
+    images.forEach((img, index) => {
+      const div = document.createElement('div');
+      div.className = 'gallery-item-premium';
+      div.innerHTML = `
+        <img src="${img.url}" class="gallery-image" alt="Project ${index + 1}">
+        <div class="gallery-overlay">
+          <h4 class="gallery-caption-premium">Project ${index + 1}</h4>
+          <p class="gallery-description">${img.filename || 'Decoration Project'}</p>
+        </div>
+      `;
+      dynamicGrid.appendChild(div);
+    });
+  } else {
+    galleryContainer.innerHTML = `
+      <div style="text-align: center; padding: 40px;">
+        <i class="fas fa-images" style="font-size: 4rem; color: rgba(255,255,255,0.3); margin-bottom: 20px;"></i>
+        <p style="color: rgba(255,255,255,0.6); font-size: 1.2rem;">
+          No projects uploaded yet. Start building your portfolio!
+        </p>
+      </div>
+    `;
+  }
 }
-function showHome(){ closePost(); }
+
+// Theme Selection
+function selectTheme(themeName) {
+  const specialRequests = document.getElementById('specialRequests');
+  const currentText = specialRequests.value;
+  specialRequests.value = currentText ? 
+    `${currentText}\nTheme Preference: ${themeName}` : 
+    `Theme Preference: ${themeName}`;
+  
+  // Visual feedback
+  showNotification(`🎨 "${themeName}" theme selected!`);
+}
+
+// Validation and Booking
+function validateAndSubmitBooking() {
+  // Get form values
+  const name = document.getElementById('clientName').value.trim();
+  const mobile = document.getElementById('clientMobile').value.trim();
+  const email = document.getElementById('clientEmail').value.trim();
+  const eventType = document.getElementById('eventType').value;
+  const eventDate = document.getElementById('eventDate').value;
+  const guests = document.getElementById('eventGuests').value;
+  const address = document.getElementById('eventAddress').value.trim();
+  const budget = document.getElementById('budgetRange').value;
+  const requests = document.getElementById('specialRequests').value.trim();
+  
+  // Validation
+  const errors = [];
+  
+  if (!name) errors.push('Full Name is required');
+  if (!mobile) errors.push('Mobile Number is required');
+  if (mobile && !/^[6-9]\d{9}$/.test(mobile)) errors.push('Valid 10-digit mobile number required');
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Valid email address required');
+  if (!eventType) errors.push('Event Type is required');
+  if (!eventDate) errors.push('Event Date is required');
+  if (!guests || guests < 10) errors.push('Expected Guests (minimum 10) is required');
+  if (!address) errors.push('Event Address is required');
+  if (!budget) errors.push('Budget Range is required');
+  
+  if (errors.length > 0) {
+    showNotification(`❌ Please fix the following:\n${errors.join('\n')}`, 'error');
+    return;
+  }
+  
+  // Prepare WhatsApp message
+  const formattedDate = new Date(eventDate).toLocaleDateString('en-IN', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+  
+  let message = `🎪 *NEW EVENT BOOKING - BROCOOL* 🎪%0A%0A`;
+  message += `*📋 CLIENT DETAILS*%0A`;
+  message += `👤 Name: ${name}%0A`;
+  message += `📞 Mobile: ${mobile}%0A`;
+  if (email) message += `📧 Email: ${email}%0A`;
+  
+  message += `%0A*🎉 EVENT DETAILS*%0A`;
+  message += `📅 Event Type: ${eventType}%0A`;
+  message += `📆 Event Date: ${formattedDate}%0A`;
+  message += `👥 Expected Guests: ${guests}%0A`;
+  message += `💰 Budget Range: ${budget}%0A`;
+  
+  message += `%0A*📍 VENUE ADDRESS*%0A${address}%0A`;
+  
+  if (requests) {
+    message += `%0A*💡 SPECIAL REQUESTS*%0A${requests}%0A`;
+  }
+  
+  message += `%0A*⏰ BOOKING TIME*%0A${new Date().toLocaleString('en-IN')}%0A%0A`;
+  message += `_Please review and send quotation. Thank you!_`;
+  
+  // Create WhatsApp URL
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  
+  // Update floating button
+  document.getElementById('whatsappFloatBtn').href = whatsappUrl;
+  
+  // Save to LocalStorage
+  const booking = {
+    name,
+    mobile,
+    email,
+    eventType,
+    eventDate,
+    guests,
+    address,
+    budget,
+    requests,
+    timestamp: new Date().toISOString(),
+    status: 'pending'
+  };
+  
+  const bookings = JSON.parse(localStorage.getItem('brocoolBookings') || '[]');
+  bookings.push(booking);
+  localStorage.setItem('brocoolBookings', JSON.stringify(bookings));
+  
+  // Clear form
+  clearBookingForm();
+  
+  // Show success message
+  showNotification('✅ Booking prepared successfully! Opening WhatsApp...', 'success');
+  
+  // Open WhatsApp after delay
+  setTimeout(() => {
+    window.open(whatsappUrl, '_blank');
+  }, 1000);
+}
+
+// Clear booking form
+function clearBookingForm() {
+  document.getElementById('clientName').value = '';
+  document.getElementById('clientMobile').value = '';
+  document.getElementById('clientEmail').value = '';
+  document.getElementById('eventType').value = '';
+  document.getElementById('eventDate').value = '';
+  document.getElementById('eventGuests').value = '';
+  document.getElementById('eventAddress').value = '';
+  document.getElementById('budgetRange').value = '';
+  document.getElementById('specialRequests').value = '';
+}
+
+// Scroll to album
+function scrollToAlbum() {
+  toggleFloatingMenu(); // Close menu first
+  document.getElementById('ultimateAlbum').scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
+// Notification system
+function showNotification(message, type = 'success') {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: ${type === 'error' ? 'linear-gradient(45deg, #ff4757, #ff3838)' : 'linear-gradient(45deg, #2ed573, #1dd1a1)'};
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 9999;
+    max-width: 400px;
+    animation: slideIn 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-line;
+    border-left: 5px solid ${type === 'error' ? '#ff6b6b' : '#10b981'};
+  `;
+  
+  notification.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <i class="fas ${type === 'error' ? 'fa-exclamation-triangle' : 'fa-check-circle'}" 
+         style="font-size: 1.5rem;"></i>
+      <div>${message}</div>
+    </div>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Remove after 5 seconds
+  setTimeout(() => {
+    notification.style.animation = 'slideIn 0.3s ease reverse';
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 300);
+  }, 5000);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  // Load user gallery
+  loadUserGallery();
+  
+  // Set minimum date to today
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  
+  const dateInput = document.getElementById('eventDate');
+  dateInput.min = today.toISOString().split('T')[0];
+  dateInput.value = tomorrow.toISOString().split('T')[0];
+  
+  // Set default WhatsApp link
+  const defaultMessage = `Hello! I'm interested in Brocool decoration services. Please share details.`;
+  const defaultUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(defaultMessage)}`;
+  document.getElementById('whatsappFloatBtn').href = defaultUrl;
+  
+  // Set up stats animation
+  animateStats();
+});
+
+// Animate stats counter
+function animateStats() {
+  const stats = {
+    projectsCount: 250,
+    happyClients: 500,
+    eventsCount: 1000,
+    citiesCount: 25
+  };
+  
+  Object.keys(stats).forEach(statId => {
+    const element = document.getElementById(statId);
+    if (element) {
+      const target = stats[statId];
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = `${Math.floor(current)}+`;
+      }, 30);
+    }
+  });
+}
 </script>
 </body>
-  </html>
-
+     </html>
